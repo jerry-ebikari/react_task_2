@@ -60,7 +60,7 @@ GET `/companies/${companyId}/contract-forms`
 
 ## API for Adding Contract Forms
 ```
-{
+Request Body: {
 company_id: companyId,
 name: formName,
 replacement_tags: typeof String,
