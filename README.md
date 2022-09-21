@@ -50,7 +50,7 @@ Husky is used to run the linting.
 - kevin@rocketplantech.com / Abcdef123
 - Create the form page https://test.rocketplantech.com:3000/form as in screenshot_1
 - Create delete modal and it can delete the form as well screenshot_2
-- When we click on add button, it will open modal popup showing form. Don't need to integrate the ADD FORM api, just UI is fine.
+- When we click on add button, it will open modal popup showing form. need to integrate the ADD FORM api
 - Need to integrate API to load the table
 
 ## API for getting Contract Forms
