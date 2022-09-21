@@ -58,6 +58,21 @@ Husky is used to run the linting.
 GET `/companies/${companyId}/contract-forms`
 ```
 
+## API for Adding Contract Forms
+```
+{
+company_id: companyId,
+name: formName,
+replacement_tags: typeof String,
+status: 'active',
+template: typeof string,
+has_signature: true || false,
+}
+```
+
+```
+POST  `/contract-forms`
+```
 ## API for deleting Contract Forms
 ```
 DELETE `/contract-forms/${contractId}`
