@@ -19,24 +19,27 @@ import { Integrations } from '@sentry/tracing';
 //   });
 // }
 // Need to get the google api loaded
-const script = document.createElement(`script`);
-script.src = process.env.REACT_GOOGLE_API;
-document.body.appendChild(script);
+//const script = document.createElement(`script`);
+//script.src = process.env.REACT_GOOGLE_API;
+//document.body.appendChild(script);
 //Add an event listener for the script tag.  This will ensure that the Google api is loaded before the app
 //Make the callback async so we can use the await keyword, when importing the App component
-script.addEventListener(`load`, async () => {
+//script.addEventListener(`load`, async () => {
   //We need to dynamically import the App component, after the google maps api has been loaded.
   //This prevents the error Uncaught ReferenceError: google is not defined.
   //Ie, in the maps.ts file, this error will occur if the api has not be instantiated
   //before the App component is rendered.
-  Api.csrfHeader().then(async (exists: boolean) => {
-    if (exists) {
+  //Api.csrfHeader().then(async (exists: boolean) => {
+    //if (exists) {
       //Dynamically import the App component
+(async() => {
       const App = await import('./app');
       render(<App.default />, document.getElementById('app'));
       return;
-    }
+}
+)();
+    //}
     //Todo we need to create an error page with contact info for support
-    alert('Please contact support.  The application cannot load.');
-  });
-});
+  //  alert('Please contact support.  The application cannot load.');
+  //});
+//});
