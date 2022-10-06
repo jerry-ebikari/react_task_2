@@ -3,9 +3,9 @@
 // //However this is what React needs to render the app.
 import React from 'react';
 import { render } from 'react-dom';
-import { Api } from 'Utils/api';
-import * as Sentry from '@sentry/react';
-import { Integrations } from '@sentry/tracing';
+//import { Api } from 'Utils/api';
+//import * as Sentry from '@sentry/react';
+//import { Integrations } from '@sentry/tracing';
 
 // Sentry integration on production, staging, and qa
 // if (window.location.hostname !== 'test.rocketplantech.com') {
