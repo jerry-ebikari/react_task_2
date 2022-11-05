@@ -25,9 +25,15 @@ const ContractFormsTabs = ({ id = 'tabs', children, className }: Props) => (
               id={id}
               role="tablist"
             >
-              <Tab onClick={() => {}}>
+              <Tab
+                key="employees-tab"
+                id="employees-tab"
+                className={`${classes.flexCenter} ${classes.button} ${`active ${classes['active-Tab']}`}`}
+                target="employees"
+                onClick={() => {}}
+              >
                 <>
-                  <Icon type="people" className={classes.icon} />
+                  <Icon type="projects" className={classes.icon} />
                   <span>Contract Forms</span>
                 </>
               </Tab>
