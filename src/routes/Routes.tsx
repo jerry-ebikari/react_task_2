@@ -42,6 +42,7 @@ import { Project } from 'Containers/Project';
 import { Account, About } from 'Containers/User';
 import { ProjectData } from 'Containers/ProjectData';
 import { RocketDry } from 'Containers/RocketDry';
+import { ContractForms } from 'Containers/ContractForms';
 
 // route components
 import { PhotoShareProvider } from 'Context/PhotoShare/PhotoShareProvider';
@@ -307,6 +308,13 @@ const RocketDryRoute = () => (
   </DashboardWrapper>
 );
 
+// contract forms route
+const ContractFormsRoute = () => (
+  <DashboardWrapper>
+    <ContractForms />
+  </DashboardWrapper>
+);
+
 const NotFoundRoute = () => <NotFoundWrapper />;
 
 export const Routes = () => (
@@ -380,6 +388,8 @@ export const Routes = () => (
 
       <PrivateRoute exact path="/user/account" render={AccountRoute} />
       <PrivateRoute exact path="/user/about" render={AboutRoute} />
+
+      <PrivateRoute exact path="/contract-forms" render={ContractFormsRoute} />
 
       <Route exact path="/photo-share/:uuid/gallery" render={PhotoShareGalleryRoute} />
       <Route exact path="/photo-share/:uuid/view" render={PhotoShareRoute} />
